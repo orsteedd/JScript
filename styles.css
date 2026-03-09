@@ -8,7 +8,7 @@ body {
 }
 
 .top-section {
-
+display: flex;
 }
 
 .left-side {
@@ -16,5 +16,29 @@ body {
 }
 
 .right-side{
-    
+
+}
+.logo-pic{
+    width: 15rem;
+    height: 15rem ;
+}
+
+.app-icon{
+width: 1.5rem;
+height: 1.5rem;
+}
+
+.pfp{
+width: 3 rem;
+height: 1 rem;
+}
+
+.search-icon{
+width: 1rem;
+height: 1rem;
+}
+
+.mic, .camera{
+width: 1.5rem;
+height: 1.5rem;
 }
