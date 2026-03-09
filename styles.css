@@ -4,33 +4,48 @@ body {
     color: rgb(242, 240, 240);
     display: flex;
     flex-direction: column;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 .top-section {
-display: flex;
+  display: flex;
+  justify-content: space-between; /* This pushes left to left, right to right */
+  align-items: center;            /* Vertically centers everything */
+  padding: 1rem 1rem;             /* Gives it some "breathing room" */
+  height: 20px;                   /* 100vh is full screen height; navs are usually short! */
 }
 
-.left-side {
-display: flex;
+.left-side, .right-side {
+  display: flex;                  /* Both sides become flex containers */
+  align-items: center;            /* Centers items inside the sides */
+  gap: 1rem;                    /* Adds perfect spacing between links */
 }
 
-.right-side{
-
+.logo{
+    display: grid;
+    place-items: center; /* This centers the logo inside the container */
+    height: 70vh;       /* This makes the container the full height of the screen */
+    width: 100%;         /* This makes the container the full width */
 }
+
+
 .logo-pic{
-    width: 15rem;
-    height: 15rem ;
+    width: 20rem;
+    height: 20rem ;
+    object-fit: contain;
 }
 
 .app-icon{
-width: 1.5rem;
-height: 1.5rem;
+width: 2rem;
+height: 2rem;
+border-radius: 15%;
 }
 
 .pfp{
-width: 3 rem;
-height: 1 rem;
+width: 35px;
+height: 35px;
+border-radius: 40%;
+object-fit: cover;
 }
 
 .search-icon{
