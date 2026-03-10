@@ -1,59 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* 1. RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't break your width math */
+}
 
 body {
-    color: rgb(242, 240, 240);
-    display: flex;
-    flex-direction: column;
+    background-color: #676a75; /* Dark background like Google Dark Mode */
+    color: white;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column; /* Stacks Top, Middle, and Bottom vertically */
+    min-height: 100vh;      /* Makes the body at least as tall as the screen */
 }
+
+a {
+    text-decoration: none;
+    color: #bdc1c6;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+/* 2. LAYOUT SECTIONS */
 
 .top-section {
-  display: flex;
-  justify-content: space-between; /* This pushes left to left, right to right */
-  align-items: center;            /* Vertically centers everything */
-  padding: 1rem 1rem;             /* Gives it some "breathing room" */
-  height: 20px;                   /* 100vh is full screen height; navs are usually short! */
+    display: flex;
+    justify-content: space-between; /* Pushes left-side and right-side apart */
+    padding: 15px 20px;
 }
 
-.left-side, .right-side {
-  display: flex;                  /* Both sides become flex containers */
-  align-items: center;            /* Centers items inside the sides */
-  gap: 1rem;                    /* Adds perfect spacing between links */
+.middle-section {
+    display: flex;
+    flex-direction: column; /* Stacks Logo, Search Bar, and Buttons vertically */
+    align-items: center;    /* Centers them horizontally */
+    justify-content: center;/* Centers them vertically in the remaining space */
+    flex-grow: 1;           /* IMPORTANT: This takes up all available empty space, pushing footer down */
+    padding-bottom: 100px;  /* Slight nudge up so it looks perfectly centered to the eye */
 }
 
-.logo{
-    display: grid;
-    place-items: center; /* This centers the logo inside the container */
-    height: 70vh;       /* This makes the container the full height of the screen */
-    width: 100%;         /* This makes the container the full width */
+.bottom-section {
+    background-color: #171717;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-top: 1px solid #3c4043;
 }
 
+/* 3. COMPONENT STYLING */
 
-.logo-pic{
-    width: 20rem;
-    height: 20rem ;
+/* The "Pill" Search Bar */
+.search-bar {
+    display: flex;
+    border: 1px solid #5f6368;
+    border-radius: 24px;   /* Creates the rounded "pill" look */
+    width: 100%;
+    max-width: 580px;      /* Keeps the search bar from getting too wide on desktop */
+    padding: 8px 15px;
+    margin-top: 20px;
+}
+
+.search-bar:hover {
+    background-color: #303134;
+    border-color: transparent;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
+
+#search-input {
+    background: transparent;
+    border: none;
+    outline: none;         /* Removes the blue outline when clicking the input */
+    color: white;
+    flex-grow: 1;          /* Makes the input fill the space between the icons */
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.button-row {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;             /* Spacing between the two buttons */
+}
+
+button {
+    background-color: #303134;
+    border: 1px solid transparent;
+    color: #e8eaed;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 1px solid #5f6368;
+}
+
+/* 4. IMAGES & ICONS */
+
+.logo-pic {
+    width: 272px;          /* Standard Google-style logo width */
+    height: auto;
     object-fit: contain;
 }
 
-.app-icon{
-width: 2rem;
-height: 2rem;
-border-radius: 15%;
+.pfp {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;    /* Perfect circle */
+    object-fit: cover;
 }
 
-.pfp{
-width: 35px;
-height: 35px;
-border-radius: 40%;
-object-fit: cover;
+/* Helper to make icons look good on dark background */
+.search-icon, .mic, .camera, .app-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
-.search-icon{
-width: 1rem;
-height: 1rem;
-}
-
-.mic, .camera{
-width: 1.5rem;
-height: 1.5rem;
+.left-side, .right-side, .search-icons-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }

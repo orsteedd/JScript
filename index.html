@@ -4,54 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>4fallU</title>
+    <title>4fallU - Google Clone</title>
   </head>
   <body>
-    <div class="top-section">
+    <nav class="top-section">
       <div class="left-side">
         <a href="./pages/about.html">About</a>
         <a href="./pages/store.html">Store</a>
       </div>
       <div class="right-side">
-        <a href="gmail.html">Gmail</a>
-        <a href="images.html">Images</a>
-        <img class="app-icon" src="./images/grid.png" />
-        <img class="pfp" src="./images/cat.jpeg" />
+        <a href="./pages/gmail.html">Gmail</a>
+        <a href="./pages/images.html">Images</a>
+        <img class="app-icon" src="./images/grid.png" alt="Apps" />
+        <img class="pfp" src="./images/cat.jpeg" alt="Profile" />
       </div>
-    </div>
+    </nav>
 
-    <div class="middle-section">
+    <main class="middle-section">
       <div class="logo">
         <img
           class="logo-pic"
           src="https://glenat.landing-hachette.fr/wp-content/uploads/sites/35/2021/05/Logo-Shangri_La.png"
+          alt="Logo"
         />
       </div>
-      <form>
-        <label for="search">Search</label>
-        <input type="text" id="search" name="search" />
-        <button type="submit">Search</button>
-        <button type="submit">Unsa man</button>
-        <img class="search-icon" src="./images/search.png" />
-        <img class="mic" src="./images/mic.png" />
-        <img class="camera" src="./images/camera.png" />
-      </form>
-    </div>
 
-    <div class="bottom-section">
-      <div>
-        <a href="./pages/advertising.html">Advertising</a>
-        <a href="./pages/business.html">Business</a>
-        <a href="./pages/how.html">How Search works</a>
+      <form class="search-container">
+        <div class="search-bar">
+          <img class="search-icon" src="./images/search.png" alt="" />
+          <input type="text" id="search-input" name="search" />
+          <div class="search-icons-right">
+            <img class="mic" src="./images/mic.png" alt="Voice Search" />
+            <img
+              class="camera"
+              src="./images/camera.png"
+              alt="Search by Image"
+            />
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button type="submit">Search</button>
+          <button type="button">Unsa man</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="bottom-section">
+      <div class="footer-group">
+        <a href="#">Advertising</a>
+        <a href="#">Business</a>
       </div>
-      <div>
-        <a href="./pages/bomba.html">Boomba</a>
+      <div class="footer-group">
+        <a href="#">Boomba</a>
       </div>
-      <div>
-        <a href="./pages/privacy.html">Privacy</a>
-        <a href="./pages/terms.html">Terms</a>
-        <a href="./pages/settings.html">Settings</a>
+      <div class="footer-group">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
       </div>
-    </div>
+    </footer>
   </body>
 </html>
